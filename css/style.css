@@ -14,15 +14,123 @@ img {
 }
 
 
-.parallax-img{
+.parallax-img {
     position: absolute;
     width: 120%;
     height: 120%;
 }
 
 
-.parallax-wrapper{
+.parallax-wrapper {
     position: relative;
     height: 100%;
     overflow: hidden;
-}    
+}
+
+
+/* Ipad Pro */
+@media screen and (max-width: 1024px) {
+    .parallax-img {
+        position: absolute;
+        width: 158%;
+        height: 75%;
+        bottom: -35px;
+    }
+
+    .first-bg {
+        top: 0px;
+        height: 100%;
+    }
+
+    .second-bg {
+        top: 25px;
+        width: 130%;
+        height: 58%;
+    }
+
+    .third-bg {
+        width: 110%;
+        height: 80%;
+        bottom: -125px;
+    }
+
+    .fourth-bg {
+        width: 120%;
+        height: 70%;
+        bottom: -200px;
+    }
+}
+
+
+/* Ipad */
+@media screen and (max-width: 768px) {
+
+    .second-bg {
+        width: 125%;
+        height: 60%;
+    }
+
+    .third-bg {
+        width: 115%;
+        height: 65%;
+        bottom: -130px;
+    }
+
+    .fourth-bg {
+        width: 115%;
+        height: 55%;
+        bottom: -128px;
+    }
+
+}
+
+/* Iphone 6/7/8 Plus, Pixel 2 */
+@media screen and (max-width:414px) {
+    .third-bg {
+        width: 125%;
+        height: 80%;
+        bottom: -150px;
+    }
+
+    .fourth-bg {
+        width: 125%;
+        height: 40%;
+        bottom: -72px;
+    }
+}
+
+/* Pixel XL, Iphone X*/
+@media (max-height: 823px) and (max-width: 411px) {
+    .second-bg {
+        top: 40px;
+        width: 130%;
+        height: 50%;
+    }
+
+    .third-bg {
+        width: 120%;
+        height: 75%;
+        bottom: -155px;
+    }
+
+    .fourth-bg {
+        width: 120%;
+        height: 50%;
+        bottom: -74px;
+    }
+}
+
+/* Iphone SE*/
+@media (max-width: 320px) {
+    .third-bg {
+        width: 120%;
+        height: 70%;
+        bottom: -115px;
+    }
+
+    .fourth-bg {
+        width: 123%;
+        height: 50%;
+        bottom: -60px;
+    }
+}

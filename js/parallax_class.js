@@ -6,16 +6,30 @@ export default class Parallax {
         this.init();
     }
     init() {
-        window.addEventListener("mousemove", (e) => {
-            const x = e.clientX / window.innerWidth, //делим позицию курсора по X на Ширину
+        let x, y; //остаток от деления позиции курсора (X/Y)/ тапа (X/Y) на ширину, высоту
+        window.addEventListener('mousemove', (e) => {
+            x = e.clientX / window.innerWidth, //делим позицию курсора по X на Ширину
                 y = e.clientY / window.innerHeight; //делим позицию курсора по Y на Высоту
-            console.log(this);
+
             this.bg.style.transform = `translate(-${x * this.step}px, -${y * this.step}px)`;
 
-            console.log(`x = ${x}, x*step = ${x*this.step}`);
+
         });
+
+
+        window.addEventListener('touchmove', (e) => {
+            if(e.touches[0].clientX >= window.innerWidth || e.touches[0].clientY >= window.innerHeight){
+                //Если довели пальцем до вертикальной или горизонтальной грани
+                return;
+            }
+            x = e.touches[0].clientX / window.innerWidth, //делим позицию курсора по X на Ширину
+                y = e.touches[0].clientY / window.innerHeight; //делим позицию курсора по Y на Высоту
+                const mStep = this.step/2;
+
+            this.bg.style.transform = `translate(-${x * mStep}px, -${y * mStep}px)`;
+            console.log(`${e.touches[0].clientX}`);
+            
+        });
+
     }
 }
-
-
-
