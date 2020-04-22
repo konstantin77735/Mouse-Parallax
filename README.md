@@ -1,5 +1,5 @@
 # Simple-Mouse-Parallax
-Tiny parallax effect on native JS (without libraries and dependencies)
+Tiny mouse parallax effect on native JS (without libraries and dependencies)
 
 Initialization Example:
 
