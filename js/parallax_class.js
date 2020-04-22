@@ -1,8 +1,8 @@
-export default class Parallax {
+export default class MouseParallax {
     constructor(imageSelector, settings) {
         this.bg = document.querySelector(imageSelector);
         this.step = settings.step || 50; // насколько сильно будет двигаться картинка
-        this.zIndex = settings.zIndex;
+        this.zIndex = settings.zIndex||1;
         this.init();
     }
     init() {
