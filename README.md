@@ -1,5 +1,6 @@
 # Simple-Mouse-Parallax
-Tiny mouse parallax effect on native JS (without libraries and dependencies)
+Паралакс-эффект на чистом JS (без библиотек и зависимостей). Нужно двигать мышкой, чтобы его увидеть.
+Mouse parallax effect on native JS (without libraries and dependencies). You need to move the mouse to see it.
 
 Initialization Example:
 
